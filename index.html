@@ -10,7 +10,7 @@
     <script>
       const btn = document.querySelector("button");
       const result = document.querySelector("p");
-      btn.addEventlistener("click", () => {
+      btn.addEventListener("click", () => {
           fetch("/.netlify/functions/addOne").then(res => res.json()).then(data => {
           result.textContent = data
         })
