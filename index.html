@@ -4,5 +4,17 @@
   </head>
   <body>
     <h1>Hello World</h1>
+    <p></p>
+    <button>Click</button>
+    
+    <script>
+      const btn = document.querySelector("button");
+      const result = document.querySelector("p");
+      btn.addEventlistener("click", () => {
+        fetch().then(res => res.json()).then(data => {
+          result.textContent = data
+        }
+      }, false);
+    </script>
   </body>
 </html>
