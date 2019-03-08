@@ -13,7 +13,7 @@
       btn.addEventlistener("click", () => {
           fetch("/.netlify/functions/addOne").then(res => res.json()).then(data => {
           result.textContent = data
-        }
+        })
       }, false);
     </script>
   </body>
