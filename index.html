@@ -11,8 +11,8 @@
       const btn = document.querySelector("button");
       const result = document.querySelector("p");
       btn.addEventListener("click", () => {
-          fetch("/.netlify/functions/addOne").then(data => {
-          result.textContent = data
+          fetch("/.netlify/functions/addOne").then(res => res.json()).then(data => {
+              result.textContent = data;
         })
       }, false);
     </script>
